@@ -1,21 +1,148 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>E-Commerce</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/HsFq0MDq/Clothing-logo.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
     <link rel="stylesheet" href="Styles/style.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </head>
+
 <body style="height:100vh; width:100vw;">
-    <section class="home-page text-white">
-        <nav class="bg-white"></nav>
-        <div class="upper d-flex flex-column justify-content-center align-items-center">
+    <header class="container-fluid ">
+        <nav class=" container-fluid navbar navbar-expand-lg bg-light w-100 position-fixed">
+            <div class="navigation container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://i.postimg.cc/HsFq0MDq/Clothing-logo.webp" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="nav-lists navbar-nav text-black bg-light">
+                        <li class="mx-5">
+                            <a href="#homepage">Home</a>
+                        </li>
+                        <li class="mx-5">
+                            <a href="#products">Product</a>
+                        </li>
+                        <li class="mx-5">
+                            <a href="#contacts">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- homepage section -->
+    <main class="text-white">
+        <section id="homepage" class="home-page d-flex flex-column align-items-center justify-content-center">
             <h1 class="display-1">Affordable fashion</h1>
             <p class="lead">We sell the best brands at lowest prices</p>
-        </div>
-    </section>
+            <a href="#products">
+                <button class="rounded-circle text-white border-2 border-white mt-5">
+                    <i class="bi bi-arrow-down"></i>
+                </button>
+            </a>
+        </section>
+
+        <section class="h-100 w-100 products  d-flex justify-content-center align-items-center flex-column"
+            id="products">
+            <h3 class="display-3 mt-5">Products</h3>
+            <div class="products-container  h-100 w-100 ">
+                <ul
+                    class="items h-100  m-auto d-flex flex-wrap justify-content-around align-items-center list-unstyled">
+                    <li class="item d-flex flex-column">
+                        <img src="https://i.postimg.cc/rm5wbymf/p1.jpg" alt="">
+                        <div class="item-info item-info d-flex align-items-center justify-content-center flex-column">
+                            <span class="w-100 item-price d-flex justify-content-between px-4 pt-2">
+                                <p>Peacock lace</p>
+                                <p>R200</p>
+                            </span>
+                            <button class="w-50 btn btn-success mb-2">More</button>
+                        </div>
+                    </li>
+                    <li class="item d-flex flex-column">
+                        <img src="https://i.postimg.cc/wvmNP7sM/p2.jpg" alt="">
+                        <div class="item-info item-info d-flex align-items-center justify-content-center flex-column">
+                            <span class="w-100 item-price d-flex justify-content-between px-4 pt-2">
+                                <p>Round Sleve Shirt</p>
+                                <p>R450</p>
+                            </span>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Launch demo modal
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                ...
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                                                </div>
+                    </li>
+                    <li class="item d-flex flex-column">
+                        <img src="https://i.postimg.cc/QMR9phn3/p3.jpg" alt="">
+                        <div class="item-info d-flex align-items-center justify-content-center flex-column">
+                            <span class="w-100 item-price d-flex justify-content-between  px-4 pt-2">
+                                <p>Rose</p>
+                                <p>R340</p>
+                            </span>
+                            <button class="w-50 btn btn-success mb-2">More</button>
+                        </div>
+                    </li>
+                    <li class="item d-flex flex-column">
+                        <img src="https://i.postimg.cc/kg3phb66/p4.jpg" alt="">
+                        <div class="item-info item-info d-flex align-items-center justify-content-center flex-column">
+                            <div class="w-100 item-price d-flex justify-content-between  px-4 pt-2">
+                                <p>Lazer blaze</p>
+                                <p>R654</p>
+                            </div>
+                            <button class="w-50 btn btn-success mb-2">More</button>
+                        </div>
+                    </li>
+                    <li class="item d-flex flex-column">
+                        <img src="https://i.postimg.cc/Y95PKGns/p5.jpg" alt="">
+                        <div class="item-info item-info d-flex align-items-center justify-content-center flex-column">
+                            <span class="w-100 item-price d-flex justify-content-between  px-4 pt-2 mb-3">
+                                <p>Light Joan</p>
+                                <p>R999</p>
+                            </span>
+                            <button class="w-50 btn btn-success mb-2">More</button>
+                        </div>
+                    </li>               
+
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

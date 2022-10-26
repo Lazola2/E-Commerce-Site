@@ -1,30 +1,142 @@
-.home-page {
-    width: 100%;
-    height: 100%;
+/* global styling */
+* {
+    transition: .4s; 
+    scroll-behavior: smooth;
+}
 
+a,a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: .6fr 6fr;
 }
 
-.home-page .upper {
+
+
+header {
+    grid-row: 1/2;
+}
+
+.navbar-brand img {
+    height: 40px;
+    border: 2px solid brown;
+}
+
+header nav {
+    width: 100%;
+    height: 9.2vh;
+    left: 0;
+}
+
+/* styling main content */
+main{
     grid-row: 2/-1;
     background: 
         linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
         url(https://i.postimg.cc/s2v3bksG/Fall-Boutique-Floor-Display.jpg);
     background-size: contain;
     background-repeat: none;
+    overflow: hidden;
 }
 
-.home-page .upper h1 {
+.home-page {
+    height: 100%;
+    width: 100%;
+    scroll-margin: 9vh;
+}
+
+.home-page h1 {
     font-size: 6rem;
 }
 
-.home-page .upper p {
+.home-page p {
     font-size: 1.7rem;
 }
 
-
-.home-page nav {
-    grid-row: 1/2;
+.home-page button {
+    background: none;
+    height: 60px;
+    width: 60px;
 }
+
+.navbar {
+    grid-row: 1/2;
+    background-color: blue;
+}
+
+/* styling product page */
+.products {
+    height: 100%;
+    width: 100%;
+}
+
+.products-container .items {
+    width: 100%;
+}
+
+.products-container .items .item {
+    width: 17%;
+    height: 65%;
+    border: 2px solid white;
+    background-position-x: 0;
+    background-position-y: top;
+    position: relative;
+}
+
+.products h3 {
+    font-size: 50px !important;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+}
+
+.item-info {
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.774);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 992px ) {
+    #navbarNavDropdown ul li {
+        height: 4rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navbarNavDropdown ul li:hover {
+        background-color: #fff;
+        font-size: large;
+        transition: .4s;
+    }
+}
+
+@media screen and (min-width: 993px ) {
+    #navbarNavDropdown {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px ) {
+    .home-page h1 {
+        font-size: 40px !important;
+    }
+
+    .home-page p {
+        font-size: 20px !important;
+    }
+}
+
+
+
